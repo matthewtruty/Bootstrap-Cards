@@ -10,7 +10,7 @@ function delete_card(card_id, card_num, last_card){
         var delay=200;//1 seconds
         setTimeout(function(){
          $.post( "cards.php", {action:"delete",id:card_id}, function( data ) {
-            generate_cards();
+            generate_cards("delete");
          });
          //your code to be executed after 1 seconds
          },delay);
@@ -22,7 +22,7 @@ function delete_card(card_id, card_num, last_card){
 
 function add_card(){
     $.post( "cards.php", {action:"add"}, function( data ) {
-        generate_cards();
+        generate_cards("add");
     });
 }
 
@@ -34,10 +34,14 @@ function generate_cards_init(){
         $('#card-container').addClass('animated zoomIn');
     });
 }
-
-function generate_cards(){
+function generate_cards(action){
     $('#card-container').removeClass('animated zoomIn');
+    $('#card-0').removeClass('animated bounceInDown');
     $.post( "cards.php", {action:"generate"}, function( data ) {
         $('#card-container').html(data);
+        if(action =="add"){
+            $('#card-0').addClass('animated bounceInDown');
+        }
+
     });
 }
