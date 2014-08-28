@@ -31,10 +31,18 @@ elseif($_POST['action'] == "generate"){
 
     $result = mysqli_query($db_connection,"SELECT * FROM cards");
     $cards_html = "";
-    while($row = mysqli_fetch_array($result)) {
+    $count = 0;
+
+    /* determine number of rows result set */
+    $row_cnt = mysqli_num_rows($result);
+    if($row_cnt == 0){
+        echo "<h1>No cards to load!</h1>";
+    }
+    else{
+        while($row = mysqli_fetch_array($result)) {
         $cards_html .=<<<CARDS_HTML
 <div class="col-md-3" style="padding: 5px 5px;">
-                <div id="card-{$row['id']}" class="card">
+                <div id="card-{$count}" class="card">
 <div class="pull-right card-icons">
   <div class="btn-group"><span class="glyphicon glyphicon-cog"></span></div>
   <div class="btn-group ">
@@ -56,7 +64,8 @@ elseif($_POST['action'] == "generate"){
 
 CARDS_HTML;
 
-
+$count++;
+    }
     }
     mysqli_close($db_connection);
     echo $cards_html;

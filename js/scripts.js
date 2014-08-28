@@ -14,7 +14,11 @@ function delete_card(card_id){
     var deleteCard = confirm('Are you sure you want to delete this card?');
     if(deleteCard){
     $.post( "cards.php", {action:"delete",id:card_id}, function( data ) {
-        $('#card-container').hide();
+
+        $('#card-' + card_id).fadeOut('slow', function(){
+            $(this).remove();
+        });
+
         generate_cards();
     });
     }
