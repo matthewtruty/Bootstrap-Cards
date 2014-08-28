@@ -51,7 +51,7 @@ elseif($_POST['action'] == "generate"){
        </span>
        </a>
    </div>
-  <div class="btn-group"><span onclick="delete_card({$row['id']})" class="glyphicon glyphicon-remove"></span></div>
+  <div class="btn-group"><span onclick="delete_card({$row['id']},{$count},{$row_cnt})" class="glyphicon glyphicon-remove"></span></div>
   </div>
  <a href="ajax.php?item={$row['id']}" class="simple-ajax-popup">                <img src="http://placehold.it/350x150/4AA248/ffffff" /></a>
                 {$row['title']}
