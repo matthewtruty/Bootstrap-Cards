@@ -19,30 +19,18 @@
 <body>
 <div id="wrapper">
     <div class="col-md-3" style="padding: 5px 5px;">
+        <a href="#">
+            <div class="card add-card" onclick="add_card();">
+                <p>
+                <h1>Add a new card</h1><br/>
+                <span class="glyphicon glyphicon-plus glyphicon-l"></span>
+                </p>
 
-        <div class="card add-card">
-        <p>
-        <h1>Add a new card</h1><br/>
-        <span onclick="add_card();" class="glyphicon glyphicon-plus glyphicon-l"></span>
-        </p>
-
+            </div>
+        </a>
     </div>
-        </div>
-        <div id="card-container">
-
-        </div>
-
-
-
-       <!--
--->
-   <!-- </div>-->
-
-
-
-
+    <div id="card-container"></div>
 </div>
-
 
 
 <!-- Google jQuery CDN -->
