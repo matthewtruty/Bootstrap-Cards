@@ -19,7 +19,8 @@
 <body>
 <div id="wrapper">
     <div class="col-md-3" style="padding: 5px 5px;">
-    <div class="card add-card">
+
+        <div class="card add-card">
         <p>
         <h1>Add a new card</h1><br/>
         <span onclick="add_card();" class="glyphicon glyphicon-plus glyphicon-l"></span>

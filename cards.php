@@ -10,7 +10,9 @@ include "db.php";
 
 
 if($_POST['action'] == "delete"){
-    print_r($_POST);
+    $db_connection = mysqli_connect(DB_H, DB_U, DB_P, DB_N);
+    mysqli_query($db_connection,"DELETE FROM cards WHERE id='$_POST[id]'");
+    mysqli_close($db_connection);
 }
 elseif($_POST['action'] == "add"){
     $db_connection = mysqli_connect(DB_H, DB_U, DB_P, DB_N);
