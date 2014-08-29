@@ -1,4 +1,4 @@
-body {
+.body-index{
     background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
 }
 
@@ -94,33 +94,23 @@ body {
 }
 
 .white-popup {
-    position: relative;
-    background: #FFF;
-    padding: 20px;
-    width: auto;
-    max-width: 500px;
-    margin: 20px auto;
+	position: relative;
+	background: #ffffff;
+	padding: 20px;
+	width: auto;
+	max-width: 500px;
+	margin: 20px auto;
 }
 
-.white-popup-block {
-    background: #FFF;
-    padding: 20px 30px;
-    text-align: left;
-    max-width: 650px;
-    margin: 40px auto;
-    position: relative;
-}
+.white-popup-block {background: #FFF;padding: 20px 30px;text-align: left;max-width: 650px;margin:40px auto;position: relative;}
+.card-icons div span{opacity: .5;}
+.card-icons div span:hover{opacity: 1;}
+#card-container:hover .card:not(:hover) {opacity: 0.4;}
+th{white-space:nowrap;}
+table img{max-height: 61px;}
+.glyphicon-md{font-size:20px;}
+.plus-col{background-color:green;color:#fff;}
+.plus-col:hover{background-color:forestgreen;color:#fff;}
+.red{background-color:red;color:#fff;}
 
-
-
-
-.card-icons div span{
-    opacity: .5;
-}
-.card-icons div span:hover{
-    opacity: 1;
-}
-
-#card-container:hover .card:not(:hover) {
-    opacity: 0.4;
-}
+.red{}

@@ -71,4 +71,5 @@ CARDS_HTML;
     mysqli_close($db_connection);
     echo $cards_html;
 }
-else{   }
+else{
+}

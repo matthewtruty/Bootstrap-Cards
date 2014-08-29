@@ -16,30 +16,23 @@
 
 </head>
 
-<body class="body-index">
+<body>
 <div id="wrapper">
-    <div class="col-md-3" style="padding: 5px 5px;">
-        <a href="#">
-            <div class="card add-card" onclick="add_card();">
-                <p>
-                <h1>Add a new card</h1><br/>
-                <span class="glyphicon glyphicon-plus glyphicon-l"></span>
-                </p>
 
-            </div>
-        </a>
+    <div id="table-container">
+
     </div>
-    <div id="card-container"></div>
 </div>
 
 
 <!-- Google jQuery CDN -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- Microsoft jQuery CDN 
+<!-- Microsoft jQuery CDN
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 -->
 <script src="js/lightbox.js"></script>
-<script src="js/scripts.js"></script>
+<script src="js/table_scripts.js"></script>
 </body>
 </html>
+
